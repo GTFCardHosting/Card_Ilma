@@ -22,19 +22,25 @@
       overflow: hidden;
     }
 
-    .overlay-image {
+    .overlay-wrapper {
       position: absolute;
       top: 0;
-      left: 200px;
-      right: 200px;
+      left: 0;
+      right: 0;
       height: 100%;
-      background-image: url('https://i.imgur.com/IWIDpkJ.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.3;
       z-index: 1;
       pointer-events: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 72px;
+      box-sizing: border-box;
+    }
+
+    .overlay-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+      opacity: 0.3;
     }
 
     .card-container {
@@ -110,13 +116,19 @@
       .card-container {
         padding: 30px 15px;
       }
+
+      .overlay-wrapper {
+        padding: 0 24px;
+      }
     }
   </style>
 </head>
 <body>
 
 <div class="bg-image">
-  <div class="overlay-image"></div>
+  <div class="overlay-wrapper">
+    <img src="https://i.imgur.com/IWIDpkJ.png" alt="Overlay Decoration" />
+  </div>
 
   <div class="card-container">
     <h1>Ilma Lira</h1>
@@ -151,7 +163,6 @@
       <img src="https://img.icons8.com/ios-filled/50/ffffff/domain.png" alt="Website2 Icon" class="icon" />
       <a href="https://i.imgur.com/HlowBGW.jpeg" target="_blank">Our Product</a>
     </div>
-
   </div>
 </div>
 
