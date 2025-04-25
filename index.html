@@ -22,25 +22,19 @@
       overflow: hidden;
     }
 
-    .overlay-wrapper {
+    .overlay-image {
       position: absolute;
       top: 0;
-      left: 0;
-      right: 0;
+      left: 72px;
+      right: 72px;
       height: 100%;
+      background-image: url('https://i.imgur.com/IWIDpkJ.png'); /* Transparent overlay image */
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      opacity: 0.3;
       z-index: 1;
       pointer-events: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 72px;
-      box-sizing: border-box;
-    }
-
-    .overlay-wrapper img {
-      max-width: 100%;
-      max-height: 100%;
-      opacity: 0.3;
     }
 
     .card-container {
@@ -57,6 +51,16 @@
       border-radius: 10px;
       text-align: center;
       backdrop-filter: blur(10px);
+    }
+
+    .portrait {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #ffffff50;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
 
     h1 {
@@ -117,8 +121,14 @@
         padding: 30px 15px;
       }
 
-      .overlay-wrapper {
-        padding: 0 24px;
+      .portrait {
+        width: 100px;
+        height: 100px;
+      }
+
+      .overlay-image {
+        left: 32px;
+        right: 32px;
       }
     }
   </style>
@@ -126,11 +136,10 @@
 <body>
 
 <div class="bg-image">
-  <div class="overlay-wrapper">
-    <img src="https://i.imgur.com/IWIDpkJ.png" alt="Overlay Decoration" />
-  </div>
+  <div class="overlay-image"></div>
 
   <div class="card-container">
+    <img src="https://i.imgur.com/DkedKCk.jpeg" alt="Portrait of Ilma Lira" class="portrait" />
     <h1>Ilma Lira</h1>
     <h2>Sales Representative & Store Manager</h2>
 
@@ -163,6 +172,7 @@
       <img src="https://img.icons8.com/ios-filled/50/ffffff/domain.png" alt="Website2 Icon" class="icon" />
       <a href="https://i.imgur.com/HlowBGW.jpeg" target="_blank">Our Product</a>
     </div>
+
   </div>
 </div>
 
