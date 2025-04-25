@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Card</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Verdana, Geneva, sans-serif;
+    }
+
+    .bg-image {
+      background-image: url('https://i.imgur.com/3a00L4x.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    .card-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 50px 30px;
+      max-width: 500px;
+      width: 90%;
+      border-radius: 10px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      opacity: 0.85;
+      margin-bottom: 30px;
+    }
+
+    .info-item {
+      margin: 15px 0;
+      font-size: 17px;
+      transition: all 0.3s ease;
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .info-item img.icon {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .info-item a {
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .info-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .info-item:hover img.icon {
+      transform: scale(1.2);
+      filter: brightness(1.5);
+    }
+
+    .info-item:hover a {
+      color: #f1f1f1;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 600px) {
+      .card-container {
+        padding: 30px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-image">
+  <div class="card-container">
+    <h1>JANE DOE</h1>
+    <h2>Creative Designer & Developer</h2>
+
+    <div class="info-item">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone Icon" class="icon" />
+      <a href="tel:+1234567890">+1 (234) 567-890</a>
+    </div>
+
+    <div class="info-item">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Email Icon" class="icon" />
+      <a href="mailto:jane@example.com">jane@example.com</a>
+    </div>
+
+    <div class="info-item">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/marker.png" alt="Location Icon" class="icon" />
+      <a href="https://maps.google.com?q=123+Main+St,+New+York,+NY" target="_blank">123 Main St, New York, NY</a>
+    </div>
+
+    <div class="info-item">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/domain.png" alt="Website Icon" class="icon" />
+      <a href="https://www.janedoe.com" target="_blank">www.janedoe.com</a>
+    </div>
+
+    <div class="info-item">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/laptop.png" alt="Portfolio Icon" class="icon" />
+      <a href="https://portfolio.janedoe.com" target="_blank">portfolio.janedoe.com</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
