@@ -9,8 +9,10 @@
       height: 100%;
       margin: 0;
       font-family: Verdana, Geneva, sans-serif;
+      background: transparent;
     }
-     .bg-image {
+
+    .bg-image {
       background-image: url('https://i.imgur.com/3a00L4x.gif');
       background-size: 100% auto;
       background-position: 50% 35%;
@@ -43,31 +45,28 @@
     }
 
     @keyframes drift {
-      0% {
-        background-position: 0% 0%;
-      }
-      100% {
-        background-position: 100% 100%;
-      }
+      0% { background-position: 0% 0%; }
+      100% { background-position: 100% 100%; }
     }
 
-     .card-container {
-       position: relative;
-       z-index: 3;
-       background-color: rgba(0, 0, 0, 0.7);
-       color: white;
-       padding: 30px 10px;
-       max-width: 320px;
-       width: 100%;
-       border-radius: 10px;
-       text-align: center;
-       backdrop-filter: blur(10px);
-       overflow: hidden;
-       border: 1px solid rgba(255, 255, 255, 0.09);
-       box-shadow:
-         0 0 0 1px rgba(255, 255, 255, 0.025) inset,
-         0 0 80px rgba(255, 255, 255, 0.075);
-     }
+    .card-container {
+      position: relative;
+      z-index: 3;
+      background-color: rgba(0, 0, 0, 0.5); /* Ensure transparency */
+      color: white;
+      padding: 30px 10px;
+      max-width: 320px;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); /* For Safari and some mobile browsers */
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.025) inset,
+        0 0 80px rgba(255, 255, 255, 0.075);
+    }
 
     .card-container::before {
       content: '';
@@ -89,9 +88,7 @@
         transform: translateX(-50%) rotate(25deg);
         opacity: 0;
       }
-      25% {
-        opacity: 1;
-      }
+      25% { opacity: 1; }
       100% {
         transform: translateX(50%) rotate(25deg);
         opacity: 1;
@@ -112,12 +109,8 @@
     }
 
     @keyframes glow {
-      0%, 100% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-      }
-      50% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-      }
+      0%, 100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+      50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
     }
 
     h1, h2, .info-item {
